@@ -127,7 +127,7 @@ mycursor.execute("""
     WHERE p.photographer_name = a.writer_name
 """)
 
-with open('combined_data_without_join.csv', 'w', newline='') as csvfile:
+with open('combined_data.csv', 'w', newline='') as csvfile:
     mycursor.execute("SELECT * FROM combined_data")
     data = mycursor.fetchall()
     csv_writer = csv.writer(csvfile)
